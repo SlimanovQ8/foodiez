@@ -10,6 +10,7 @@ class Category(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(unique=True, max_length=50)
     image = models.ImageField(upload_to="images/")
+    description = models.TextField(default="")
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="category"
     )

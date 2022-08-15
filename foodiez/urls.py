@@ -28,6 +28,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("home/", views.home_Page, name="home"),
     path("login/", views.login_page, name="login"),
+    path("register/", views.register_user, name="register"),
+    path("create/category/", views.create_category, name="create-category"),
 
 ]
 

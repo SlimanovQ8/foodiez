@@ -63,9 +63,14 @@
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Don't have an account?</p>
-                    <button type="submit" class="btn btn-outline-danger">Create new</button>
+
                   </div>
 
+                    <form>
+                          <button formaction="{% url 'register' %}" type="submit" class="btn btn-outline-danger"> Create New</button>
+
+
+                      </form>
                 </form>
 
               </div>

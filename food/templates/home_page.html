@@ -1,62 +1,326 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-      <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-  crossorigin="anonymous"
-/>
 
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-  crossorigin="anonymous"
-></script>
-  </head>
-  <body>
-    <main>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoga Studio Template">
+    <meta name="keywords" content="Yoga, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>B6eny Homepage</title>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+      <link rel = "stylesheet" href="{% static 'bootstrap.min.css' %}" type="text/css">
+      <link rel = "stylesheet" href="{% static 'nice-select.css' %}" type="text/css">
+      <link rel = "stylesheet" href="{% static 'style.css' %}" type="text/css">
+      <link rel = "stylesheet" href="{% static 'slicknav.min.css' %}" type="text/css">
+
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section-other">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="./index.html"><img src="../media/images/b6eny.PNG" width="150" height="100" alt=""></a>
+            </div>
+            <div class="nav-menu">
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Categories</a>
+                            <ul class="sub-menu">
+                                <li><a href="create_category.html">Add Category</a></li>
+                                <li><a href="categories.html">My Categories</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="recipe.html">Recipes</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-me.html">Add Recipe</a></li>
+                                <li><a href="categories.html">My Recipes</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li><a href="recipe.html">Ingredients</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-me.html">Add Ingredient</a></li>
+                                <li><a href="categories.html">My Ingredients</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-right search-switch">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-    </main>
-  </body>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Search Section Begin -->
+{#    <div class="hero-search set-bg" data-setbg="../media/images/b6eny.PNG">#}
+{#        <div class="container" >#}
+{#            <div class="filter-table" >#}
+{##}
+{#                <form action="#" class="filter-search">#}
+{#                    <input type="text" placeholder="Search recipe">#}
+{#                    <select id="category">#}
+{#                        <option value="">Category</option>#}
+{#                    </select>#}
+{#                    <select id="tag">#}
+{#                        <option value="">Tags</option>#}
+{#                    </select>#}
+{#                    <button type="submit">Search</button>#}
+{#                </form>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+    <!-- Hero Search Section End -->
+
+    <!-- Recipe Section Begin -->
+    <section class="recipe-section spad">
+        <div class="container">
+            <main>
+                <article>
+                {% if categories %}
+                <section>
+                    <div class="row">
+
+                    {% for category in categories %}
+                <div class="col-lg-4 col-sm-6">
+                    <div class="recipe-item">
+                        <a href="#"><img src={{ category.image.url}} alt=""></a>
+                        <div class="ri-text">
+                            <div class="cat-name">{{ category.created_by.username }}</div>
+                            <a href="#">
+                                <h4>{{ category.name }}</h4>
+                            </a>
+                            <p> {{ category.description }} </p>       </div>
+                    </div>
+                </div>
+
+                    {% endfor %}
+                        {% else %}
+        <p>No Category yet.</p>
+        {% endif %}
+
+                    </div></section>
+            </article>
+            </main>
+
+
+{#        <div class="row">#}
+{#                <div class="col-lg-12">#}
+{#                    <div class="recipe-pagination">#}
+{#                        <a href="#" class="active">01</a>#}
+{#                        <a href="#">02</a>#}
+{#                        <a href="#">03</a>#}
+{#                        <a href="#">04</a>#}
+{#                        <a href="#">Next</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Recipe Section End -->
+
+{#    <!-- Categories Feature Recipe Section Begin -->#}
+{#    <section class="categories-feature-recipe spad">#}
+{#        <div class="section-title">#}
+{#            <h5>Featured Recipes</h5>#}
+{#        </div>#}
+{#        <div class="container po-relative">#}
+{#            <div class="plus-icon">#}
+{#                <i class="fa fa-plus"></i>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col-lg-7">#}
+{#                    <div class="cfr-item">#}
+{#                        <div class="cfr-item-img set-bg" data-setbg="img/cat-feature/big-1.jpg">#}
+{#                            <i class="fa fa-plus"></i>#}
+{#                        </div>#}
+{#                        <div class="cfr-item-text">#}
+{#                            <div class="cat-name">Vegan</div>#}
+{#                            <a href="#">#}
+{#                                <h4>One Pot Weeknight Lasagna Soup Recipe</h4>#}
+{#                            </a>#}
+{#                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt#}
+{#                                ut labore et dolore magna aliqua.</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="cfr-item">#}
+{#                        <div class="cfr-item-img set-bg" data-setbg="img/cat-feature/big-2.jpg">#}
+{#                            <i class="fa fa-plus"></i>#}
+{#                        </div>#}
+{#                        <div class="cfr-item-text">#}
+{#                            <div class="cat-name">Meat Lover</div>#}
+{#                            <a href="#">#}
+{#                                <h4>Veggie soup with Mushrooms</h4>#}
+{#                            </a>#}
+{#                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna#}
+{#                                aliqua. Lorem ipsum dolor sit amet.</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="cfr-item">#}
+{#                        <div class="cfr-item-img set-bg" data-setbg="img/cat-feature/big-3.jpg">#}
+{#                            <i class="fa fa-plus"></i>#}
+{#                        </div>#}
+{#                        <div class="cfr-item-text">#}
+{#                            <div class="cat-name">Desert</div>#}
+{#                            <a href="#">#}
+{#                                <h4>Caramel Ice Cream with Berries</h4>#}
+{#                            </a>#}
+{#                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt#}
+{#                                ut labore et dolore magna aliqua.</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="cfr-item">#}
+{#                        <div class="cfr-item-img set-bg" data-setbg="img/cat-feature/big-4.jpg">#}
+{#                            <i class="fa fa-plus"></i>#}
+{#                        </div>#}
+{#                        <div class="cfr-item-text">#}
+{#                            <div class="cat-name">Desert</div>#}
+{#                            <a href="#">#}
+{#                                <h4>Freash Octopuse with lime juice</h4>#}
+{#                            </a>#}
+{#                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit#}
+{#                                amet, consectetur adipiscing.</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-4 offset-lg-1">#}
+{#                    <div class="cfr-small-item">#}
+{#                        <a href="#"><img src="img/cat-feature/small-1.jpg" alt=""></a>#}
+{#                        <div class="cfr-small-text">#}
+{#                            <div class="cat-name">Vegan</div>#}
+{#                            <h6>One Pot Weeknight Lasagna Soup Recipe</h6>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="cfr-small-item">#}
+{#                        <a href="#"><img src="img/cat-feature/small-2.jpg" alt=""></a>#}
+{#                        <div class="cfr-small-text">#}
+{#                            <div class="cat-name">Vegan</div>#}
+{#                            <h6>Lava Cake with a Tone of Chocolate</h6>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="cfr-small-item">#}
+{#                        <a href="#"><img src="img/cat-feature/small-3.jpg" alt=""></a>#}
+{#                        <div class="cfr-small-text">#}
+{#                            <div class="cat-name">Vegan</div>#}
+{#                            <h6>One Pot Weeknight Lasagna Soup Recipe</h6>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="cfr-small-item">#}
+{#                        <a href="#"><img src="img/cat-feature/small-4.jpg" alt=""></a>#}
+{#                        <div class="cfr-small-text">#}
+{#                            <div class="cat-name">Vegan</div>#}
+{#                            <h6>Smoked Salmon mini Sandwiches with Onion</h6>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="cfr-small-item">#}
+{#                        <a href="#"><img src="img/cat-feature/small-5.jpg" alt=""></a>#}
+{#                        <div class="cfr-small-text">#}
+{#                            <div class="cat-name">Vegan</div>#}
+{#                            <h6>Asparagus with Pork Loin and Vegetables</h6>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="cfr-small-item">#}
+{#                        <a href="#"><img src="img/cat-feature/small-6.jpg" alt=""></a>#}
+{#                        <div class="cfr-small-text">#}
+{#                            <div class="cat-name">Vegan</div>#}
+{#                            <h6>Dry Cookies with Corn</h6>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="cfr-small-item">#}
+{#                        <a href="#"><img src="img/cat-feature/small-7.jpg" alt=""></a>#}
+{#                        <div class="cfr-small-text">#}
+{#                            <div class="cat-name">Vegan</div>#}
+{#                            <h6>Italian Tiramisu with Coffe</h6>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    <!-- Categories Feature Recipe Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="fs-left">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="img/footer-logo.png" alt="">
+                            </a>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                            viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                    <form action="#" class="subscribe-form">
+                        <h3>Subscribe to our newsletter</h3>
+                        <input type="email" placeholder="Your e-mail">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+                        <a href="#"><i class="fa fa-pinterest"></i><span>Pinterest</span></a>
+                        <a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+                        <a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                        <a href="#"><i class="fa fa-youtube"></i><span>Youtube</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright-text">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model -->
+	<div class="search-model">
+		<div class="h-100 d-flex align-items-center justify-content-center">
+			<div class="search-close-switch">+</div>
+			<form class="search-model-form">
+				<input type="text" id="search-input" placeholder="Search here.....">
+			</form>
+		</div>
+	</div>
+	<!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>

@@ -38,19 +38,20 @@
                   <h4 class="mt-1 mb-5 pb-1">Welcome to B6eny</h4>
                 </div>
 
-                <form action="{% url 'login' %}" method="POST">
+                <form action="{% url 'register' %}" method="POST">
             <!-- prettier-ignore -->
             {% csrf_token %}
                   <p>Please login to your account</p>
 
                      <div class="form-outline mb-4">
-                            <input type="text" id="form.id_name" class="form-control" name="{{ form.username.html_name}}" placeholder="Name" required autofocus>
+                            <input type="text" id="form.id_name" class="form-control" name="{{ form.name.html_name}}" placeholder="Name" required autofocus>
+
 
                     <label class="form-label" for="form.id_name">Name</label>
                   </div>
 
                   <div class="form-outline mb-4">
-        <input type="email" id="form.id_email" class="form-control" placeholder="email" required name="{{ form.password.html_name}}">
+        <input type="email" id="form.id_email" class="form-control" placeholder="email" required name="{{ form.email.html_name}}">
                     <label class="form-label" for="form.id_email">Email</label>
                   </div>
 
@@ -70,13 +71,18 @@
                     <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Sign Up</button>
                   </div>
 
-                  <div class="d-flex align-items-center justify-content-center pb-4">
-                    <p class="mb-0 me-2">Already have an account?</p>
-                    <button type="submit" class="btn btn-outline-danger">Log In</button>
-                  </div>
+
 
                 </form>
 
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">Already have an account?</p>
+                      <form>
+                          <button formaction="{% url 'login' %}" type="submit" class="btn btn-outline-danger"> Login</button>
+
+
+                      </form>
+                  </div>
               </div>
             </div>
             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
