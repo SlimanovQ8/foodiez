@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Category Detail {% endblock title%}</title>
+
+</head>
+
+{% block content %}
+
+
+    <section class="single-page-recipe spad d-flex justify-content-center">
+
+                    <div class="col-lg-5">
+                    <div class="ingredients-item">
+                        <div class="intro-item">
+                            <img src="{{ categories.image.url }}" alt="">
+                            <h2>{{ categories.name }}</h2>
+
+                            <div class="recipe-time">
+                                <ul>
+                                    <li>Ingredients: <span>{{ categories.NumOfIngredients }}</span></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ingredient-list">
+
+                            <div class="list-item">
+                                <h5>Ingredients</h5>
+                                <div class="salad-list">
+                                    <ul>
+
+                                         {% for ingredient in ingredients %}
+
+
+                                        <li> {{ ingredient }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+        <div class="container " >
+
+                <div class="col-lg-7">
+                    <div class="recipe-right">
+                        <div class="recipe-desc">
+                            <h3>Description</h3>
+                            <p>{{ categories.description }}</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+{% endblock content %}

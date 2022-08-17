@@ -1,0 +1,86 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+<head>
+
+        <title> {% block title %} Recipe detail {% endblock title %} </title>
+
+</head>
+
+{% block content %}
+
+      <section class="single-page-recipe spad">
+        <div class="recipe-top">
+            <div class="container-fluid">
+                <div class="recipe-title">
+                    <span>~ {{ recipe.NumOfIngredients }} ingredients </span>
+                    <h2>{{ recipe.name }}</h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="ingredients-item">
+                        <div class="intro-item">
+                            <img src="{{ recipe.image.url }}" alt="">
+                            <h2>{{ recipe.name }}</h2>
+
+                            <div class="recipe-time">
+                                <ul>
+                                    <li>Cook time: <span>10 min</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ingredient-list">
+
+                            <div class="list-item">
+                                <h5>Ingredients</h5>
+                                <div class="salad-list">
+                                    <ul>
+                                          {% for ingredient in ingredients %}
+
+
+                                        <li> {{ ingredient }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-fact">
+
+                        <ul>
+
+                            <li>Chalories: {{ recipe.chalories }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="recipe-right">
+                        <div class="recipe-desc">
+                            <h3>Description</h3>
+                            <p>{{ recipe.description }}</p>
+                            <p></p>
+                        </div>
+                        <div class="instruction-list">
+                            <h3>Instructions</h3>
+                            <ul>
+                                <li>
+                                    {{ recipe.instructions}}
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

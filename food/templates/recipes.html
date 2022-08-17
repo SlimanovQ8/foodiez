@@ -1,50 +1,49 @@
+
 {% extends 'base.html' %}
+
 {% load static %}
 
-
 <head>
-
-    <title>B6eny Homepage</title>
-
-
-
+    <title> {% block title %} Recipes {% endblock title %} </title>
 </head>
 
+{% block content %}
 
-    {% block content %}
     <section class="recipe-section spad">
         <div class="container">
             <main>
                 <article>
-                {% if categories %}
+                {% if recipes %}
                 <section>
                     <div class="row">
 
-                    {% for category in categories %}
+                    {% for rec in recipes %}
                 <div class="col-lg-4 col-sm-6" >
                     <div class="recipe-item">
-                        <a href="{%url 'category-detail' CategoryID=category.id%}"><img src={{ category.image.url}} alt=""></a>
+                        <a href="{%url 'recipe-detail' RecipeID=rec.id%}"><img src={{ rec.image.url}} alt=""></a>
                         <div class="ri-text">
-                            <div class="cat-name">{{ category.created_by.username }}</div>
                             <a href="#">
-                                <h4>{{ category.name }}</h4>
+                                <h4>{{ rec.name }}</h4>
                             </a>
-                            <p> {{ category.description }} </p>       </div>
+                            <p> {{ rec.description }} </p>       </div>
                     </div>
                 </div>
 
                     {% endfor %}
                         {% else %}
-        <p>No Category yet.</p>
+        <p>No Recipes yet.</p>
         {% endif %}
 
                     </div></section>
             </article>
             </main>
+
+
+
             </div>
+
         </div>
     </section>
-
 
 
 

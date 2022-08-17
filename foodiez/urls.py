@@ -29,7 +29,13 @@ urlpatterns = [
     path("home/", views.home_Page, name="home"),
     path("login/", views.login_page, name="login"),
     path("register/", views.register_user, name="register"),
+    path("logout/", views.logout_view, name="logout"),
     path("create/category/", views.create_category, name="create-category"),
+    path("create/ingredient/", views.create_ingredient, name="create-ingredient"),
+    path("create/recipe/", views.create_recipe, name="create-recipe"),
+    path("category/<int:CategoryID>/", views.category_detail, name="category-detail"),
+    path("recipe/", views.recipes, name="recipes"),
+    path("recipe/<int:RecipeID>/", views.recipe_detail, name="recipe-detail"),
 
 ]
 

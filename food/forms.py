@@ -18,12 +18,27 @@ class UserLogin(forms.Form):
     password = forms.CharField(required=True, widget=forms.PasswordInput())
 
 class CategoryForm(forms.ModelForm):
-    # created_by = forms.ModelChoiceField(
-    #     User.objects.all(),
-    #     widget=forms.HiddenInput(),
-    # )
+
 
     class Meta:
         model = models.Category
+        exclude = ["created_by"]
+
+
+class IngredientForm(forms.ModelForm):
+    class Meta:
+        model = models.Ingredient
+        fields = "__all__"
+        widgets = {
+            'name': forms.TextInput(attrs= {'class': 'form-control'}),
+            # 'image': forms.ImageField(attrs={'class': 'form-control'}),
+            'category_name': forms.Select(attrs={'class': 'form-control'}),
+        },
+
+class RecipeForm(forms.ModelForm):
+
+
+    class Meta:
+        model = models.Recipe
         exclude = ["created_by"]
 

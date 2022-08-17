@@ -1,3 +1,5 @@
+from datetime import timedelta
+
 from django.db import models
 
 # Create your models here.
@@ -35,9 +37,15 @@ class Recipe(models.Model):
     )
     id = models.AutoField(primary_key=True)
     name = models.CharField(unique=True, max_length= 50)
-    description = models.TextField(default="")
-    image = models.ImageField(upload_to="images/")
+    description = models.TextField(default="test")
+    duration = models.DurationField(default= timedelta(minutes=10), null=True)
+    instruction = models.TextField(default="tes")
+    chalories = models.PositiveIntegerField(default=0)
 
+    image = models.ImageField(upload_to="images/")
+    created_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="recipeCreator", default=""
+    )
     def __str__(self):
         return self.name
 
